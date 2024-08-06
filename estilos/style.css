@@ -31,7 +31,7 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+   
     background-color: white;
     width: 250px;
     height: 515px;
@@ -41,6 +41,7 @@ section#login {
 
     transition: width .3s, height .3s;
     transition-timing-function: ease;
+    transform: translate(-50%, -50%);
 
 }
 
@@ -54,16 +55,40 @@ section#login > div#imagem {
 
 form > div.campo {
     background-color: #5f2c82;
+    border: 1px solid #5f2c82 ;
     width: 100%;
     display: block;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     margin: 5px 0px;
 
 }
 
-form label {
+div.campo > label {
     display: none;
+}
+
+div.campo > span {
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #6deae6;
+    font-size: 1em;
+    width: calc(100% - 44.6px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+    transform: translateY(-10px);
+    
+}
+
+div.campo > input:focus-within {
+    background-color: white;
 }
 
 section#login > div#formulario {
@@ -108,6 +133,6 @@ form > a.botao:hover {
     color: white;
 }
 
-form > a.botao > i {
+form > a.botao > span {
     font-size: 0.8em;
 }
